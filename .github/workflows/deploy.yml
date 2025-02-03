@@ -1,4 +1,4 @@
-name: Deploy to IPFS via Pinata
+name: Deploy to IPFS
 
 on:
   push:
@@ -7,17 +7,13 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy to IPFS
+      - name: Deploy to IPFS via Pinata
         uses: popovoleksandr/ipfs-pinata-deploy-action@v1
         with:
           pinata-jwt: ${{ secrets.PINATA_JWT }}
           path: ./public
           verbose: true 
-
-      - name: Output CID
-        run: echo "Deployed CID: ${{ steps.deploy.outputs.cid }}"
