@@ -1,4 +1,4 @@
-# PinataIPFSuploads
+# Pinata IPFS uploads
 
 To access the website hosted on IPFS with Pinata, use the following link :  
 https://ipfs.io/ipfs/      Followed by the HASH found on the deploy action log. 
