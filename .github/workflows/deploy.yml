@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to IPFS via Pinata
-        uses: popovoleksandr/ipfs-pinata-deploy-action@v1
+        uses: popovoleksandr/ipfs-pinata-deploy-action@v1.5.2
         with:
           pinata-jwt: ${{ secrets.PINATA_JWT }}
           path: ./public
